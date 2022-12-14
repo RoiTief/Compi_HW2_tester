@@ -10,3 +10,8 @@ This is a collaboratory tester for assignment 2, meaning the test collection is 
 *IMPROTANT!*
 The tester assumes the Tag_Parser module is written in a file named `compiler.ml`
 
+# How to add tests of your own
+1. Open `tp_tests.ml` file
+2. Edit the file
+3. Add wanted tests
+4. Commit the changes and create a pull request
