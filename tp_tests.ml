@@ -11,6 +11,7 @@ type tp_failure_test = {test: string};;
 
 let tp_success_tests = [
   {test = "(letrec () (+ 1 2) (- 2 1))"; expected_result = "(let () (begin (+ 1 2) (- 2 1)))"};
+  {test = "(and 1)"; expected_result = "1"};
   {test = "(and)" ; expected_result = "#t"}
 ];;
 
