@@ -1,4 +1,4 @@
-#use "tests.ml";;
+#use "tp_tests.ml";;
 #use "compiler.ml";;
 open Tag_Parser;;
 open Reader;;
