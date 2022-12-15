@@ -65,7 +65,7 @@ let test_sa str expected_success expected_result =
 
 let run_sa_tests (s_tests : sa_success_test list) (f_tests : sa_failure_test list) =
         try 
-                let stub_result  = ScmConst'(ScmVoid) in
+                let stub_result  = ScmConst'(ScmVoid) in (*Can probably put something better here*)
                 let _ = Printf.printf "Running tests for semantic analyzer\n" in
                 let _ = List.fold_left (fun _ (s_test : sa_success_test) -> test_sa s_test.test true s_test.expected_result) () s_tests in
                 let _ = List.fold_left (fun _ (f_test : sa_failure_test) -> test_sa f_test.test false stub_result) () f_tests in
