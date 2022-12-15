@@ -1,5 +1,4 @@
-(*IMPORTANT (#use "compiler.ml";;) must be called before calling (#use "sa_tests.ml";;)*)
-
+#use "compiler.ml";;
 (* expects semantics to complete successfully
  * 'test' - original s-expression
  * 'expected_result' - output of (Semantic_Analysis.semantics (Tag_Parser.tag_parse (Reader.nt_sexpr str 0).found))
