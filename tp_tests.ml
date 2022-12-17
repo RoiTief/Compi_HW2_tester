@@ -23,6 +23,9 @@
    {test = "`(a b c)"; expected_result = "(cons 'a (cons 'b (cons 'c '())))"};
    {test = "`(,a b ,c)"; expected_result = "(cons a (cons 'b (cons c '())))"};
    {test = "`(,@a b ,@c)"; expected_result = "(append a (cons 'b c))"};
+   {test = "(or expr1 expr2)"; expected_result = ScmOr [ScmVarGet (Var "expr1"); ScmVarGet (Var "expr2")]};
+   {test = "(or)"; expected_result = ScmConst (ScmBoolean false)};
+   {test = "(or expr)"; expected_result = ScmVarGet (Var "expr")};
    {test = "`((a ,a) (b ,b))"; expected_result = "(cons (cons 'a (cons a '())) (cons (cons 'b (cons b '())) '()))"};
    {test = "\"the value is ~{ (foo x (+ x y)) }\\n\""; expected_result = "(string-append \"the value is \" (format \"~a\" (foo x (+ x y))) \"\\n\")"};
    {test = "((lambda () (or 1 2)))"; expected_result = "(let () (or 1 2))"}
